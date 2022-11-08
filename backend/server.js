@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use("/account", account)
 
-// app.use(book)
+//app.use("/book", book)
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
@@ -29,3 +29,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => {
     console.log(err)
   }) 
+
+// app.get("/", (req, res) => res.send("main page"))
+
+// app.get("/login", (req, res) => res.send("login page"))
